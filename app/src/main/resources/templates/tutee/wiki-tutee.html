@@ -1,0 +1,48 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
+<head>
+    <meta charset="UTF-8">
+    <title>Wiki for tutee</title>
+</head>
+<body class="wiki-page">
+<!--/*@thymesVar id="owner" type="com.spring.dao.models.Tutee"*/-->
+
+<h1 th:text="'Tutee Profile'">Tutee Profile</h1>
+<h2 id="Info">Info</h2>
+<p>The purpose of tutoring program is to give career starters an overview into enterprise software development, to enable them and the team a better ground to start working on the project. This are required training materials to acquire key knowledge and best practice in the field.</p>
+<p>key subjects for study</p>
+<p><b>General</b></p>
+<p><b>Java</b></p>
+<p><b>DevOps</b></p>
+<p><b>Quality Assurance</b></p>
+
+<h2 id="Useful links">Useful links</h2>
+<p><a href="https://comtradegroup.sharepoint.com/sites/Comtrade360?OR=Teams-HL&CT=1653289542907&params=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMjA0MDExMTQxMyJ9">CT360 SharePoint</a> – here you can fully familiarize yourself with the Comtrade 360 company, culture, management, current news, teams, company benefits,<a href="https://comtradegroup.sharepoint.com/sites/Comtrade360/SitePages/Tutorials.aspx">tutorials</a> and many more 😊</p>
+<p><a href="https://connect.comtrade.com/Pages/news.aspx">Connect</a>– as our Comtrade Group corporate news portal, where you can find a lot of interesting information, business news, photos from events, special offers, kudos corner and among other things, <a href="https://dailyreport.comtrade.com/">Daily Report</a>as well as Service Desk where you can report your IT related problems</p>
+<p><a href="https://hrast.comtrade.com/Login.aspx?ReturnUrl=%2fHome.aspx">Hrast</a> – as our multifunctional tool, which can show you the organization chart by the company, employee skills, trainings, certificates and similar things</p>
+<h2 id="Logging time trainees">Logging time trainees</h2>
+<p>For all days time should be logged in Daily report.</p>
+<p>As effort "Learning and General" project should be chosen.</p>
+<img th:src="@{/images/DailyReportImage1.png}" width="960px" alt="Log effort as learning and general">
+<p>After that choose General</p>
+<img th:src="@{/images/DailyReportImage2.png}" width="960px" alt="After that choose general">
+<P>Then choose other</P>
+<img th:src="@{/images/DailyReportImage3.png}" width="960px" alt="Choose other">
+<p>and then write Learning in Activity</p>
+<img th:src="@{/images/DailyReportImage4.png}" width="960px" alt="Write Learning in activity">
+<p>and 8 hours or if you wked less/more on that day</p>
+
+<h2 id="Tutoring team coordinator(s)">Tutoring team coordinator(s)</h2>
+<p>Your TTC is Bea(ta) Krivec. She holds your dailys and with her you agree on your schedule (together with Location Managers). In her absence, Marija Bošković or Nataša Tovornik replace her.</p>
+
+<h2 id="Tutors">Tutors</h2>
+<p>Tutors:</p>
+<table class="table table-striped">
+    <tr th:each="tutor : ${tutors}">
+        <td th:text="${tutor.email}">email</td>
+        <td th:text="${tutor.firstName}">firstName</td>
+        <td th:text="${tutor.lastName}">lastName</td>
+    </tr>
+</table>
+</body>
+</html>

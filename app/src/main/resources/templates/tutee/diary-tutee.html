@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
+<head>
+    <title>Diary</title>
+</head>
+<body>
+<div th:if="${isDiaryExist == true}">
+    <h2>Welcome, [[${username}]]</h2>
+    <h1>My diary</h1>
+    <h3>Last Edited on: [[${diary.date}]]</h3>
+    <div id="diary-container" style="overflow-y:scroll">
+        <p th:each="line : ${diary.text.split('\n')}">[[${line}]]</p>
+    </div>
+    <form th:action="@{/tutee/diary-tutee/edit}" method="post">
+        <textarea name="text" style="overflow-y:scroll; height: 150px; width:100%" placeholder="write your diary here"></textarea>
+        <input type="submit" value="Save" th:action="@{/tutee/diary-tutee/edit}" class="btn btn-primary"/>
+        <input type="reset" value="Cancel" th:onclick="'javascript:window.location.href=\'/tutee/diary-tutee\';'" class="btn btn-danger"/>
+    </form>
+</div>
+<div th:if="${isDiaryExist == false}">
+    <p>Looks like there is nothing here</p>
+    <form th:action="@{/tutee/diary-tutee/create}" method="get">
+        <button type="submit">Create Diary</button>
+    </form>
+</div>
+<form th:if="${isCreatingDiary}" th:action="@{/tutee/diary-tutee/create}" method="post">
+    <label>Title:</label>
+    <input type="text" name="title" placeholder="Enter title here"/>
+    <br>
+    <label>Description:</label>
+    <textarea name="description" style="overflow-y:scroll; height: 150px; width:100%" placeholder="Enter description here"></textarea>
+    <br>
+    <input type="reset" value="Cancel" th:onclick="'javascript:window.location.href=\'/tutee/diary-tutee\';'" class="btn btn-danger"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Admin Panel</title>
+  <link th:href="@{/css/admin-panel.css}" rel="stylesheet" />
+</head>
+<body>
+<div id="header">
+<h2 class="h2-bordered">Admin panel</h2>
+<button class="btn btn-primary" id="buttonLogout"><a th:href="@{/logout}"><i class="fa fa-sign-out fa-xs"></i> Logout</a></button>
+</div>
+<div class="container" id="containerForContent">
+  <div id="formForAdding">
+  <form id="login-form" action="/admin/admin-panel" method="POST" style="padding:40px; width:400px;">
+    <label for="role">Role:</label><br>
+    <select id="role" name="role">
+      <option disabled selected>Choose role</option>
+      <option value="tutor">Tutor</option>
+      <option value="tutee">Tutee</option>
+    </select>
+    <label for="firstname">First Name:</label><br>
+    <input type="text" id="firstname" name="firstname" placeholder="Input first name"><br>
+    <label for="lastname">Last Name:</label><br>
+    <input type="text" id="lastname" name="lastname" placeholder="Input last name"><br>
+    <label for="email">E-Mail:</label><br>
+    <input type="text" id="email" name="email" placeholder="Input email (e.g. email@email.com)"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" placeholder="Input password"><br>
+    <select id="modules" name="module_id" style="margin-top:30px; margin-bottom:20px;">
+      <option th:each="module: ${modules}" th:text="${module.name}" th:value="${module.module_id}"></option>
+    </select>
+    <button type="submit" class="btn btn-primary" id="buttonZaDodavanje"> Add User</button>
+  </form>
+  </div>
+  <div id="formForAddingTuteeModule">
+    <form id="formTuteeModule" action="/admin/dashboard" method="POST" style="padding:40px; width:400px;">
+      <label for="tutee_id">Tutee:</label><br>
+      <select id="tutee_id" name="tutee_id">
+        <option th:each="tutee : ${tutees}" th:text="${tutee.firstName+' '+tutee.lastName}" th:value="${tutee.tutee_id}"></option>
+      </select>
+      <label for="module_id">Module:</label><br>
+      <select id="module_id" name="module_id" >
+        <option th:each="module: ${modules}" th:text="${module.name}" th:value="${module.module_id}"></option>
+      </select>
+      <label for="startDate">Start date:</label><br>
+      <input type="date" id="startDate" name="startDate"><br>
+      <label for="endDate">End date:</label><br>
+      <input type="date" id="endDate" name="endDate"><br>
+      <button type="submit" class="btn btn-primary" > Add tutee on module</button>
+    </form>
+  </div>
+
+  <div id="viewTables">
+    <table class="table table-striped nowrap">
+    <thead>
+    <h2 style="float:left">Tutors</h2>
+    <tr>
+    <th>Email</th>
+    <th>First name</th>
+    <th>Last name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="tutor : ${tutors}">
+      <td th:text="${tutor.email}">email</td>
+      <td th:text="${tutor.firstName}">firstName</td>
+      <td th:text="${tutor.lastName}">lastName</td>
+    </tr>
+    </tbody>
+  </table>
+    <table class="table table-striped nowrap">
+      <thead>
+      <h2 style="float:left">Tutees</h2>
+      <th>Email</th>
+      <th>First name</th>
+      <th>Last name</th>
+      </thead>
+      <tr th:each="tutee : ${tutees}">
+        <td th:text="${tutee.email}">email</td>
+        <td th:text="${tutee.firstName}">firstName</td>
+        <td th:text="${tutee.lastName}">lastName</td>
+      </tr>
+    </table>
+    <table class="table table-striped nowrap">
+      <thead>
+      <h2 style="float:left">Tutees on modules</h2>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Module</th>
+      <th>Start date</th>
+      <th>End date</th>
+      </thead>
+      <tr th:each="tuteeModule : ${tuteeModules}">
+        <td th:text="${tuteeModule.tutee.firstName}">firstName</td>
+        <td th:text="${tuteeModule.tutee.lastName}">lastName</td>
+        <td th:text="${tuteeModule.module.name}">name</td>
+        <td th:text="${tuteeModule.startDate}">startDate</td>
+        <td th:text="${tuteeModule.endDate}">endDate</td>
+      </tr>
+    </table>
+
+</div>
+</div>
+</body>
+</html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link th:href="@{/css/style.css}" rel="stylesheet" />
+<!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.6/dist/umd/popper.min.js" integrity="sha384-ZGj6T8G6bL2QfRkb7k/Cv1ZjPAWFLD3VWpZlYO+P/HpwIhMf+zcT/mtUQ9fiZvH" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script th:src="@{/java/tuteeModules.js}"></script>

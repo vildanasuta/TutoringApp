@@ -1,0 +1,57 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout1 :: layout1 (~{::body},'home')}">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard for tutor</title>
+</head>
+<body>
+<h3>Tutees: </h3>
+<div class="row">
+    <table class="table table-striped">
+        <tr th:each="tutee : ${tutees}">
+            <td th:text="${tutee.email}">email</td>
+            <td th:text="${tutee.firstName}">firstName</td>
+            <td th:text="${tutee.lastName}">lastName</td>
+        </tr>
+    </table>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card" style="width: 30rem;margin-bottom:40px;">
+            <img class="card-img-top" th:src="@{/images/assignments.jpg}" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">Add new assignments for tutees with multiple tasks to complete.</p>
+                <a th:href="@{/tutor/assignments-tutor}" class="btn btn-primary">Add assignments</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card" style="width: 30rem;margin-bottom:40px;">
+            <img class="card-img-top" th:src="@{/images/wiki.jpg}" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">Wiki is a place with all the info you need for CT360 Tutoring Program.</p>
+                <a th:href="@{/tutor/wiki-tutor}" class="btn btn-primary">Visit wiki</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card" style="width: 30rem;margin-bottom:40px;">
+            <img class="card-img-top" th:src="@{/images/feedback.jpg}" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">Leave feedback for tutees with info on their accomplishments and directions for the future.</p>
+                <a th:href="@{/tutor/feedback-tutor}" class="btn btn-primary">Leave feedback</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card" style="width: 30rem;margin-bottom:40px;">
+            <img class="card-img-top" th:src="@{/images/teams.jpg}" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">Teams is useful app where you can chat with tutees and other tutors to share experiences and solve problems easily.</p>
+                <a href="https://teams.microsoft.com/" target="_blank" class="btn btn-primary">Visit Teams</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

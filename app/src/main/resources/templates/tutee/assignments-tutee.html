@@ -1,0 +1,17 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignments for tutee</title>
+</head>
+<body>
+<h1>Assignments for you on this module: </h1>
+
+<table class="table table-striped">
+    <tr th:each="assignment : ${assignmentsForTutee}">
+        <td th:text="${assignment.name}">Name</td>
+        <td th:text="${assignment.description}">Description</td>
+    </tr>
+</table>
+</body>
+</html>

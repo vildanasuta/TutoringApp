@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" th:fragment="layout (template, menu)">
+<head>
+    <title>Tutoring App</title>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/java/java.js}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <img th:src="@{/images/logo.png}" width="250px" height="130px" alt="logo_tutoringapp"/>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a th:href="@{/tutee/tutee-home}"><i class="fa fa-tachometer fa-xs"></i> Dashboard</a>
+            </li>
+            <li>
+                <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" onclick="modulesShow()"><i class="fa fa-graduation-cap fa-xs"></i> Modules</a>
+                <ul class="collapse list-unstyled" id="modulesSubmenu">
+                    <li>
+                        <a href="/tutee/modules-tutee#General">General</a>
+                    </li>
+                    <li>
+                        <a href="/tutee/modules-tutee#Quality%20Assurance">QA/TA</a>
+                    </li>
+                    <li>
+                        <a href="/tutee/modules-tutee#DevOps">DevOps</a>
+                    </li>
+                    <li>
+                        <a href="/tutee/modules-tutee#Java">Java</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a th:href="@{/tutee/assignments-tutee}"><i class="fa fa-tasks fa-xs"></i> Assignments</a>
+            </li>
+            <li>
+                <a id="wikiLink" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" onclick="wikiShow()" ><i class="fa-brands fa-wikipedia-w fa-xs"></i> Wiki</a>
+                <ul class="collapse list-unstyled" id="wikiSubmenu">
+                    <li>
+                        <a href="/tutee/wiki-tutee#Info">Info</a>
+                    </li>
+                    <li>
+                        <a href="/tutee/wiki-tutee#Useful%20links">Useful links</a>
+                    </li>
+                    <li>
+                        <a href="/tutee/wiki-tutee#Logging%20time%20trainees">Logging time trainees</a>
+                    </li>
+                    <li>
+                        <a href="/tutee/wiki-tutee#Tutoring%20team%20coordinator(s)">Tutoring team coordinator(s)</a>
+                    </li>
+                    <li>
+                        <a href="/tutee/wiki-tutee#Tutors">Tutors</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a th:href="@{/tutee/diary-tutee}"><i class="fa fa-pencil fa-xs"></i> Diary</a>
+            </li>
+            <li>
+                <a th:href="@{/logout}"><i class="fa fa-sign-out fa-xs"></i> Logout</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="https://teams.microsoft.com/" target="_blank" class="teams">Open Teams</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-info" th:onclick="toggle()">
+                    <i class="fas fa-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                </button>
+                <button type="button" id="userProfile" class="btn btn-info">
+                    <i class="fa fa-user"></i>
+                    <span th:text="${username}"></span>
+                </button>
+
+
+
+
+
+
+            </div>
+        </nav>
+        <th:block th:include="${template}" />
+
+    </div>
+</div>
+
+</body>
+</html>

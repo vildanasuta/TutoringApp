@@ -1,0 +1,832 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
+<head>
+    <meta charset="UTF-8">
+    <title>Modules for tutee</title>
+</head>
+<body class="module">
+<h1 id="General">General</h1>
+<h2 th:text="'Enterprise SW Dev'">Enterprise SW Dev</h2>
+<div>
+    <p><b>Objective</b></p>
+    <p>•Understand the essentials of enterprise engineering</p>
+    <p>•Enterprise ready SW development</p>
+    <p>•Understand the importance quality assurance, project management, testing and project communication/coordination and development documentation on enterprise solutions</p>
+    <p>•Get an overview of the development process</p>
+    <p>•Understand the principles of team work</p>
+    <p>•Understand the importance of process</p>
+    <p>•Understand the SLDC stages</p>
+    <p>•Get familiar with the factors that influence enterprise solutions</p>
+</div>
+<br>
+<br>
+<p><b>Duration: 0,5 days</b></p>
+<br>
+<br>
+<h2>Content</h2>
+<p>Intro by our VP of Engineering Mario Kranjčec<a href="https://web.microsoftstream.com/video/c41ff0fb-99e3-4d1e-a976-ea167396de76?channelId=bf49d787-d004-419f-aaba-3ccace1b01d7">Watch 'General SW development' | Microsoft Stream</a></p>
+<p>Software development is a complex task and typically follows an SDLC process which can be different depending on the type of project, customer, etc. Software development is typically performed by large number of people (possibly divided into several teams) that work on different components or parts of software. It is important for all team members:</p>
+<p><b>•to understand their role and responsibilities inside a team,</b></p>
+<p><b>•to understand & follow the project defined processes and</b></p>
+<p><b>•to be familiar and know how to use the tools that are being used in the team (e.g. Git, JIRA).</b></p>
+<br>
+<p>The following are essential SDLC stages:</p>
+<p>•Problem Definition</p>
+<p>•Plan</p>
+<p>•Design</p>
+<p>•Build</p>
+<p>•Test</p>
+<p>•Deploy</p>
+<p>•Maintain</p>
+<br>
+<p>There are several factors that one needs to consider when working on large software solutions or products including:</p>
+<p>•Architecture and design constraints</p>
+<p>•Operability (system availability, stability, reliability, recoverability, audit trail, capacity, data retention)</p>
+<p>•Performance (operational performance, scalability, load balancing, efficiency)</p>
+<p>•Usability</p>
+<p>•Security</p>
+<p>•Internationalization and Localization (I18N/L10N)</p>
+<p>•Supportability and maintainability</p>
+<br>
+<p>In enterprise world product maintenance is a serious job which typically involves a group of people which are not software developers.
+    It is therefore very important to produce software which can be supported and maintained by someone else.
+    This involves thinking about providing enough audit trails, logs, metrics, dashboards, etc. already when designing and implementing the software.
+</p>
+<p>Software engineers are responsible to write quality software and must therefore think about <a href="https://www.360logica.com/blog/testability-role-software-testing/">software testability</a>early in the SLDC.
+    One of the main tasks is to automate things as much as possible, including code quality checks and software testing.
+    <a href="https://www.guru99.com/software-testing-introduction-importance.html">Software testing</a> can be categorized into Functional, Non-Functional and Regression testing.
+    One of the core developer tasks is to make sure to implement Unit and Integrations tests together with new functionality during development phase.
+    Automating unit and integration testing can significantly improve software quality and minimize manual testing efforts. It goes also hand in hand with the CI/CD principles that were already mentioned in this document.
+</p>
+<br>
+<p>Please read through the following articles to learn more about code quality, unit testing and integration testing:</p>
+<br>
+<p>•What is <a href="https://www.perforce.com/blog/sca/what-code-quality-overview-how-improve-code-quality">Code Quality</a>?</p>
+<p>•What is <a href="https://www.guru99.com/unit-testing-guide.html">Unit Testing</a>?</p>
+<p>•What is <a href="https://www.guru99.com/integration-testing.html">Integration Testing</a>?</p>
+<br>
+<p>A general overview can be also found here</p>
+<p>•<a href="https://www.cobuildlab.com/blog/enterprise-software-development">Enterprise Software Development: a definition and a process (cobuildlab.com)</a></p>
+<br>
+<br>
+<p><b>Assigment</b></p>
+<br>
+<p>Want to know if you are a Full Stack developer yet? Complete the following quizzes:</p>
+<p>•<a href="https://quizizz.com/admin/quiz/5cfb9b2999c5e3001a74f3ef/data-structure"></a></p>
+<p>•<a href="https://www.proprofs.com/quiz-school/story.php?title=data-structures"></a></p>
+<p>write your results in your dairy</p>
+<br>
+<br>
+<br>
+<h2><b>Agile SW</b></h2>
+<br>
+<p><b>Agile SW development</b></p>
+<br>
+<p>Duration: 2 days</p>
+<br>
+<p><b>Objectives</b></p>
+<p>•Understand the agile approach on real projects</p>
+<p>•Understand and learn how to be a valuable team member in an agile team</p>
+<p>•Understand different methodologies and frameworks</p>
+<p>•Get to know different tools for cooperation</p>
+<br>
+<p><b>Content</b></p>
+<p><a href="https://www.agilealliance.org/agile-essentials/">Agile Essentials</a></p>
+<p>-Frameworks:</p>
+     <p> •SCRUM - <a href="https://www.scrum.org/resources/what-is-scrum">What is Scrum?</a></p>
+     <p> •(Optional) KanBan - <a href="https://kanbanize.com/kanban-resources/getting-started/what-is-kanban">What is Kanban?</a></p>
+     <p> •(Optional) Scaled Agile Framework - <a href="https://www.scaledagileframework.com/">SAFe</a></p>
+     <p> •SAFe explained in 5 minutes <a href="https://www.youtube.com/watch?v=aW2m-BtCJyE&t=1s"></a></p>
+<p><a href="https://www.scaledagileframework.com/agile-teams">Working in an agile team</a></p>
+<p>Agile Development Tools:</p>
+   <p>•Rally – watch Rally Basics video <a href="https://techdocs.broadcom.com/us/en/ca-enterprise-software/agile-development-and-management/rally-platform-ca-agile-central/rally/learning-rally/rally-video-tutorials.html"></a></p>
+<br>
+<p><b>Assignment</b></p>
+<p>-watch introduction <a href="https://web.microsoftstream.com/video/73f91cc9-97a5-409e-bfb7-d3ddc9bd405b?list=studio">Watch 'Introduction to Agile SW' | Microsoft Stream</a></p>
+<p>-complete other learning materials</p>
+<br>
+<br>
+<p><b>Additional materials:</b></p>
+<p>Tools</p>
+<p>•Jira - <a href="https://university.atlassian.com/student/path/815443-jira-fundamentals?&aceid=&adposition=&adgroup=133274755836&campaign=13884051737&creative=581523373428&device=c&keyword=jira%20basics&matchtype=p&network=g&placement=&ds_kids=p69365305632&ds_e=GOOGLE&ds_eid=700000002221486&ds_e1=GOOGLE&gclid=CjwKCAiA4KaRBhBdEiwAZi1zzqmpF2oku_feAnJLDFughYS61COgo4H9Bn28T1wjmBsgxIxaa3bAqhoC5rYQAvD_BwE&gclsrc=aw.ds">Jira Fundamentals - Free Training</a></p>
+<p>•Content Collaboration Tools: Confluence - <a href="https://university.atlassian.com/student/path/861302-confluence-fundamentals?sid=f711f834-713b-4ab7-999e-69c53973f367&sid_i=1">Confluence Fundamentals - Free Training</a></p>
+<p>•MVP <a href="https://www.youtube.com/watch?v=0P7nCmln7PM&t=3s">Making sense of MVP (Minimum Viable Product) - YouTube</a></p>
+<br>
+<br>
+<br>
+<h2><b>Version control GIT</b></h2>
+<br>
+<p><b>Objectives</b></p>
+  <p>•Understand the importance of Version Control</p>
+  <p>•Understand the git concepts</p>
+  <p>•Gain ability to collaborate in large project with multiple contributors and assure quality</p>
+<br>
+<p><b>Duration: </b>2 days</p>
+<br>
+<p><b>Content</b></p>
+<p>   • overview: <a href="https://www.atlassian.com/git/tutorials/what-is-version-control">What is version control | Atlassian Git Tutorial</a></p>
+<p>   • Video: <a href="https://www.youtube.com/watch?v=8JJ101D3knE">Git Tutorial for Beginners: Learn Git in 1 Hour - YouTube</a></p>
+<p>   • Docs: <a href="https://git-scm.com/book/en/v2">Git Book</a></p>
+<p>   • Semantic Versioning <a href="https://semver.org/"></a></p>
+<br>
+<p><b>Assignment</b></p>
+<p>• complete pre-learning (content)</p>
+<p>• watch Q&A recording <a href="https://web.microsoftstream.com/video/c50537de-3c58-4c3c-a019-fa0dc79c3904?list=studio">Watch 'Version Control Q&A Session' | Microsoft Stream</a></p>
+<br>
+<p><b>Additional material:</b></p>
+<p>   Some articles about signed commits.</p>
+<p><a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits"></a></p>
+<p><a href="https://www.freecodecamp.org/news/what-is-commit-signing-in-git"></a></p>
+<br>
+<p>Signing commits - GitHub Docs, you can sign commits locally using GPG or S/MIME.</p>
+<p><a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits"></a></p>
+<br>
+<br>
+<h2><b>CI/CD -Continuous integration (CI) / Continuous Delivery (CD)</b></h2>
+<p><b>Objectives</b></p>
+<br>
+<p> •Importance of fast feedback loop in ensuring valuable solutions are delivered</p>
+<p> •Understand continuous delivery and integration</p>
+<p> •Get familiar with the impact of delivery principles on quality and performance</p>
+<p><b>Duration: </b>2 days</p>
+<br>
+<p><b>Content</b></p>
+<p> - Pre-learning (preparation)</p>
+<p>     • <a href="https://www.youtube.com/watch?v=WVTxTo06Mwk">Why CI/CD - YouTube</a> </p>
+<p>     • <a href="https://www.atlassian.com/continuous-delivery/principles">Continuous delivery principles</a></p>
+<p>     • <a href="https://www.atlassian.com/continuous-delivery/continuous-integration">What is Continuous Integration?</a></p>
+<p>     • Jenkins demonstration in the session with tutor – tool for automating build, test and deploy SW</p>
+<br>
+<p><b>Assignments</b></p>
+<p> • complete pre-learning before the session with tutor</p>
+<br>
+<br>
+<br>
+<h2><b>Cloud Essentials & System Administration</b></h2>
+<br>
+<p><b>Objectives:</b></p>
+<br>
+<p>- Networking:</p>
+<p>  • Understand basic network fundamentals</p>
+<p>  • Understand the IPv4, Understand Network IP</p>
+<p>  • Understand Subnet mask and how to calculate it</p>
+
+<div>
+<p>- Azure fundamentals:</p>
+<p>    • Understanding Azure, Azure Marketplace, services, account & subscription</p>
+<p>    • Learn  what is Learn sandbox </p>
+<p>    • Understand  Azure cost monitor and usage</p>
+</div>
+<div>
+    <p>- Virtualization basics:</p>
+    <p>     • Understand Virtualization Basics</p>
+    <p>     • Understand Hypervisors</p>
+    <p>     • Understand Azure virtual machines </p>
+    <p>     • VM installation & configuration essentials</p>
+
+</div>
+<p>- Basic Windows server administration</p>
+<p>    • Understand Windows server 2019
+       • Learn how to configure Windows server network
+       • Learn how to install Roles and Features (+ remote desktop)
+</p>
+<p>- Basic Linux administration</p>
+<p>    • Learn Linux system basic administration  and commands
+       • Learn about installing Linux packages
+       • Learn to configure network
+</p>
+<p>- PowerShell</p>
+<p>    • Understand what PowerShell is and what you can use it for
+       • Learn about Commands to automate tasks
+</p>
+<p><b>Duration: </b>2 days</p>
+<br>
+<p><b>Content</b></p>
+<p><b>- Network fundamentals (2h)</b></p>
+<p>     -Video:</p>
+<p>      •<a href="https://www.youtube.com/watch?v=ddM9AcreVqY">IPv4 Addressing Lesson 1: Binary and the IP Address</a></p>
+<p>      •<a href="https://www.youtube.com/watch?v=XQ3T14SIlV4">IPv4 Addressing Lesson 2: Network IDs and Subnet Masks</a></p>
+<p>      •<a href="https://www.youtube.com/watch?v=4xlzlgYGqW8">IPv4 Addressing Lesson 3: The Class System</a></p>
+<p><b>Tutorial:</b></p>
+<p><a href="https://learn.microsoft.com/en-us/training/modules/network-fundamentals/">Fundamentals of computer networking</a></p>
+<br>
+<p><b>- Azure fundamentals (2h)</b></p>
+<p><b>   -Tutorial:</b></p>
+<p>       •<a href="https://learn.microsoft.com/en-us/training/modules/intro-to-azure-fundamentals/">Introduction to Azure fundamentals</a></p>
+<p>       •<a href="https://learn.microsoft.com/en-us/training/modules/azure-compute-fundamentals/">Explore Azure compute services</a></p>
+<p><b>   -Docs:</b></p>
+<p>       •<a href="https://learn.microsoft.com/en-us/azure/azure-monitor/usage-estimated-costs">Azure Monitor cost and usage - Azure Monitor</a></p>
+<p>       •<a href="https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis">Explore and analyse costs with cost analysis</a></p>
+<p><b>     -Note:</b></p>
+<p>- You CAN use your enterprise account @comtrade.com in Learn sandbox
+    DO NOT use enterprise account @comtrade.com in Free Azure account (only for personal or student  accounts)</p>
+<br>
+<br>
+<p><b>- Virtualization basics (2h)</b></p>
+<p><b>    -Video:</b></p>
+<p>         •<a href="https://www.youtube.com/watch?v=L8A9PHeyRrY">What is Virtualization? – YouTube</a></p>
+<p><b>    -Tutorial:</b></p>
+<p>         •<a href="https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/">Introduction to Azure virtual machines</a></p>
+<p>         •<a href="https://learn.microsoft.com/en-us/training/modules/create-windows-virtual-machine-in-azure/">Create a Windows virtual machine in Azure</a></p>
+<p><b>    -Docs (Save links for future use):</b></p>
+<p>         •<a href="https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal?tabs=ubuntu">Create a Linux virtual machine in the Azure</a></p>
+<p>         •<a href="https://learn.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal">Create a Windows virtual machine in the Azure</a></p>
+<p><b>- Basic Windows server administration (1h)</b></p>
+<p><b>    -Video</b></p>
+<p>         •<a href="https://www.youtube.com/watch?v=8yaq5VQ96gE">Introduction to Windows Server 2019</a></p>
+<p>         •<a href="https://www.youtube.com/watch?v=JEDzLxEE90c">Configuring Windows Server 2019 Networking</a></p>
+<p>         •<a href="https://www.youtube.com/watch?v=bzaM7dvSBDM">Enable Remote Desktop and using sconfig</a></p>
+<p>         •<a href="https://www.youtube.com/watch?v=opHiT2InMMk">Configuring Windows server Roles and Features</a></p>
+<p><b>   -Docs</b></p>
+<p>         •<a href="https://learn.microsoft.com/en-us/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features">Install or Uninstall Roles</a></p>
+<p>         •<a href="https://learn.microsoft.com/en-us/windows-server/administration/server-core/server-core-roles-and-services">Roles And Features included in Windows server</a></p>
+<p><b>   -Tutorials</b></p>
+<p>         •<a href="https://techcommunity.microsoft.com/t5/itops-talk-blog/deep-dive-and-beginner-learning-for-windows-server/ba-p/2198767">(Get a feel/overview of Windows Server roles – no need to go through all tutorials)</a></p>
+<p><b>- Basic Linux System Administration (0,5h)</b></p>
+<p><b>    -Video</b></p>
+<p>         •<a href="https://www.youtube.com/watch?v=BMGixkvJ-6w">Linux system tutorial for Beginners</a></p>
+<p><b>    -Docs</b></p>
+<p>         •<a href="https://ubuntu.com/server/docs/network-configuration">Configure network on Ubuntu</a></p>
+<p>         •<a href="https://linuxhint.com/network-configuration-centos-8/">Configure network on RHEL / CentOS</a></p>
+<p>         •<a href="https://www.geeksforgeeks.org/beginners-guide-to-linux-system-administration/?ref=rp">Beginner’s Guide to Linux System Administration</a></p>
+<p><b>- Introduction to PowerShell (1,5h)</b></p>
+<p><b>     -Modules</b></p>
+<p>          •<a href="https://learn.microsoft.com/en-us/training/modules/introduction-to-powershell/">Introduction to PowerShell</a></p>
+<p>          •<a href="https://learn.microsoft.com/en-us/training/modules/discover-commands/">Discover commands in PowerShell</a></p>
+<p>          •<a href="https://learn.microsoft.com/en-us/training/modules/powershell-write-first/">Your first PowerShell code</a></p>
+<p><b>Assignment</b></p>
+<p> • watch introduction <a href="https://web.microsoftstream.com/video/e6355573-8b11-4be3-84c4-0c1c75dca6e3?channelId=bf49d787-d004-419f-aaba-3ccace1b01d7">Watch 'Cloud Essentials and System Administration' | Microsoft Stream</a></p>
+<p> • complete self-learning</p>
+<p> • virtualization basics - complete the module (you CAN use enterprise account @comtrade.com for sandbox) NOTE: Azure need</p>
+<br>
+<br>
+<h2><b>Security Awareness</b></h2>
+<p><b>Objectives</b></p>
+<p>Understand and apply the principles of security awareness in development and general wo</p>
+<p><b>Duration:</b> 0,5 days</p>
+<br>
+<p><b>Content</b></p>
+<p>Pre-learning</p>
+<p>  • <a href="https://www.youtube.com/watch?v=BGMG7AIKNRg">Information Security Awareness | Training For Employees</a></p>
+<p>  • <a href="https://web.microsoftstream.com/video/b1c8e172-edfd-4caf-b3a9-6c820855d82b?channelId=0c57530b-e974-4d75-98ac-120860758aa7">Watch '2021 Information Security and Cyber Security - refresher' | Microsoft Stream</a></p>
+<p>  • Use password management tools like <a href="https://keepass.info/">KeePass</a> for storing your passwords and use secure passwords.</p>
+<p>  • Project security  - secure communication, account and credential management, pen testing</p>
+<p><b>Assignment:</b></p>
+<p>  • complete pre-learning before the session with tutor</p>
+<br>
+<br>
+<h2><b>Legal</b></h2>
+<p><b>Objectives</b></p>
+<p>     • Understand what is Software IP and what it serves for</p>
+<p>     • Purpose of NDAs</p>
+<p>     • 3rd party software usage and copying code</p>
+<p><b>Duration time: </b>0,5 days</p>
+<br>
+<p><b>Content</b></p>
+<p>    - What is Software IP?</p>
+<p>        • Software intellectual property, also known as software IP, is a computer code or program that is protected by law against copying, theft, or other use that is not permitted by the owner.
+             Software IP belongs to the company that either created or purchased the rights to that code or software. Any unauthorized use of it by someone else is illegal.</p>
+<p>        • <a href="http://connect/Repository/DOC/Content/Company/Departments/Legal/Rules_Procedures/REuse%20of%20existing%20IP.docx"></a></p>
+<br>
+<p>    -What is Non-Disclosure Agreement?</p>
+<p>      NDA protects the owner of the IP (typically our customers) from the other party (typically us) developing the same IP and competing against the IP owner on market with it.
+</p>
+<br>
+<p>    -Use of 3rd party software:</p>
+<p>       • 3rd party software usage must be documented and approved by legal
+           Open source licenses must be approved by legal team and any obligations must be satisfied
+           (e.g. distributing open source component license with the product)</p>
+<p>      • <a href="https://connect.comtrade.com/Repository/DOC/Content/Company/Departments/Legal/Rules_Procedures/3rd%20party%20Software%20Use%20GUIDELINES%20final.pdf">3rd party Software Use GUIDELINES final.pdf (comtrade.com)</a></p>
+<p><b>Assignment</b></p>
+<p>      • watch content (IP, NDA) <a href="https://web.microsoftstream.com/video/56f38a09-07da-4027-813d-cc28cd189f72?list=studio"></a></p>
+<p>      • <a href="https://web.microsoftstream.com/video/6c016a68-2d5c-42dc-b554-008557e55bf3?list=studio">Watch 'Legal aspects of SW development - part II' | Microsoft Stream</a></p>
+<br>
+<br>
+<h2><b>Data Structures</b></h2>
+<p><b>Objectives</b></p>
+<p>
+    • Get to know main data structures
+    • Understand main algorithms, complexity
+    • Learn when to use algorithms and data structures (best match and not to use)
+</p>
+<p><b>Duration:</b>2 days</p>
+<br>
+<p><b>Content:</b></p>
+<p>
+    • Web page: <a href="https://learntocodewith.me/posts/data-structures/">The 4 Data Structures Every New Developer Should Know </a>
+    • Video: <a href="https://www.youtube.com/watch?v=BBpAmxU_NQo">Data Structures and Algorithms for Beginners</a>
+</p>
+<p><b>Assignments:</b></p>
+<p> • complete self-learning materials prior to session with tutor</p>
+<p><b>Additional material:</b></p>
+<p> • Advanced Tutorials: <a href="https://www.tutorialspoint.com/data_structures_algorithms/index.htm"> Data Structure and Algorithms Tutorial   </a></p>
+<br>
+<br>
+<h2><b>Database and SQL</b></h2>
+<p><b>Objectives</b></p>
+<p>
+    • Understand the principles of database design
+    • Learn basics of SQL
+    • Understand and learn the effective usage of SQL
+</p>
+<p><b>Duration: </b>1 day</p>
+<br>
+<p><b>Content</b></p>
+<p>  Tutorial: <a href="https://www.udacity.com/blog/2021/02/sql-tutorial-database-programming.html"> SQL Tutorial — Database Programming  </a></p>
+<p>  Tutorial: <a href="https://www.w3schools.com/sql/">W3Schools - SQL</a></p>
+<p><b>Assignments:</b></p>
+<p>  • complete self-learning materials</p>
+<br>
+<br>
+<h2><b>Feedback</b></h2>
+<br>
+<p><b>When you finish with your General module learning, please share your feedback about it :</b></p>
+<p> • <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=I6QsC7HwHki3MfhO9cSizDJTrBee39FEhOt2X1JJGrNUODE3UFROUk5STlJKRE1NVzhRSzdJMktQUS4u"></a></p>
+<br>
+<br>
+<h2><b>Interesting platforms to learn</b></h2>
+<p><b>(Trainees picks):</b></p>
+<p> <a href="https://www.freecourseweb.org/">FreeCourseWeb | Free Paid Videos | Download Online Paid Tutorials For Free in 2022</a></p>
+<p> <a href="https://medium.com/">Medium – Where good ideas find you.</a></p>
+<p> <a href="https://www.codecademy.com/">Learn to Code - for Free | Codecademy</a></p>
+<p> <a href="https://www.youtube.com/c/Freecodecamp"></a></p>
+<p> <a href="https://www.jetbrains.com/academy/">Learn computer programming | Online courses from JetBrains Academy</a></p>
+<p> <a href="https://www.geeksforgeeks.org/">GeeksforGeeks | A computer science portal for geeks</a></p>
+
+
+<h1 id="Quality Assurance">Quality Assurance</h1>
+<br>
+<h2><b>Objectives</b></h2>
+<p> • Objectives of the QA module is to get familiar with Software Testing principles. Software Testing is divided by types to Manual and Automated testing. Week 1 will cover basics of Manual Testing, Week 2 will cover basics of Automated Testing.</p>
+<p><a href="https://login.microsoftonline.com/0b2ca423-f0b1-481e-b731-f84ef5c4a2cc/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&response%5Ftype=code%20id%5Ftoken&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=05231B87429098048600C911BAF809F635B7BC3EDE14A617%2D20B005435C56AB5D953FB0851E69A44F2BFE3E28929A3B99A2362DD69F8A2F17&redirect%5Furi=https%3A%2F%2Fcomtradegroup%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0w&login%5Fhint=HANA%2EMARIC%40EDU%2EFIT%2EBA&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=12358aa0%2Dc013%2D5000%2De573%2D59dcd4fa6ce0">QA Module Kick off Presentation</a></p>
+<br>
+<p><b>Week 1 objectives:</b></p>
+<p>    • What is QA/Software testing</p>
+<p>    • What is Manual testing</p>
+<p>    • How to write a test case</p>
+<p>    • What is a defect and how to write an effective defect report</p>
+<p>    • How to write a good testing report</p>
+</p>
+<br>
+<p><b>Week 2 objectives:</b></p>
+<p>    • What is Automated Testing</p>
+<p>    • What is Selenium</p>
+<p>    • Web Element Locators</p>
+<p>    • TestNG framework (annotations, assertions)</p>
+<p>    • Wait commands in Selenium Web Driver</p>
+<p>    • How to write selenium test</p>
+<br>
+<h2>Content</h2>
+<p><a href="https://www.guru99.com/software-testing.html">Software Testing Tutorial: Free QA Course (guru99.com)</a></p>
+<br>
+<h2><b>WEEK 1</b></h2>
+<p><a href="https://www.guru99.com/software-testing-introduction-importance.html">Software testing introduction importance</a></p>
+<p><a href="https://www.guru99.com/software-testing-life-cycle.html">STLC (Software testing lifecycle)</a></p>
+<p><a href="https://www.guru99.com/manual-testing.html">Manual Testing</a></p>
+<p><a href="https://www.guru99.com/regression-testing.html">Regression testing</a></p>
+<p><a href="https://www.guru99.com/test-scenario.html">Test Scenario</a></p>
+<p><a href="https://www.guru99.com/test-case.html">Test case</a></p>
+<p><a href="https://blog.loginradius.com/engineering/test-cases-for-registration-and-login-page/">How to write test cases</a></p>
+<p><a href="https://www.youtube.com/watch?v=Ct-lOOUqmyY">EXACT INSTRUCTIONS CHALLENGE Funny video</a></p>
+<p><a href="https://www.guru99.com/software-testing-techniques.html">Software testing techniques</a></p>
+<p><a href="https://www.guru99.com/how-test-reports-predict-the-success-of-your-testing-project.html">Test report</a></p>
+<p><a href="https://www.guru99.com/defect-management-process.html">Defect management process</a></p>
+<p><a href="https://theqalead.com/topics/bug-tracking-template/">How to write a bug report</a></p>
+<p><a href="https://www.guru99.com/defect-life-cycle.html">Defect lifecycle</a></p>
+<p><a href="https://www.istqb.org/#certifications-diagram">ISTQB Certification diagram</a></p>
+<p><a href="https://xnovodotorg.wordpress.com/2012/11/12/defect-reports/">CAN PIG RIDE</a></p>
+<br>
+<h2><b>WEEK 2</b></h2>
+<p><a href="https://www.guru99.com/automation-testing.html">What is Automated Testing?</a></p>
+<p><a href="https://www.guru99.com/introduction-to-selenium.html">Introduction to Selenium</a></p>
+<p><a href="https://www.selenium.dev/documentation/webdriver/">Selenium WebDriver</a></p>
+<p><a href="https://www.browserstack.com/guide/selenium-webelement-commands">Selenium WebElement Commands</a></p>
+<p><a href="https://www.toolsqa.com/selenium-webdriver/selenium-locators/">Web Element Locators</a></p>
+<p><a href="https://www.browserstack.com/guide/wait-commands-in-selenium-webdriver">Wait commands in Selenium WebDriver</a></p>
+<p><a href="https://www.swtestacademy.com/xpath-selenium/">XPath Selenium Locators Strategies</a></p>
+<p><a href="https://www.guru99.com/all-about-testng-and-selenium.html">TestNG Framework</a></p>
+<br>
+<br>
+<h2>ASSIGNMENTS</h2>
+<div>
+<p><b>Week 1:</b></p>
+    <p>    1. You need to test candy vending machine.</p>
+    <p>  According to the specifications, machine has the following abilities:</p>
+    <p> • It can accept euro coins of: 10 cent, 20 cent, 50 cent, €1 and €2</p>
+    <p> • It can return the change </p>
+    <p> • It displays prices of the products</p>
+</div>
+<br>
+<p>Write a detailed Test Report on the testing of the candy vending machine from the customer perspective.
+    Focus on functional testing.</p>
+<br>
+<p>
+    2. Test this <a href="https://qainterview.pythonanywhere.com/">website</a> buggy website and find as many defects as possible:
+    •    Create Test cases
+    •    Write a defect report for every defect found
+    •    Write a detailed Test Report
+</p>
+<br>
+<br>
+<p><b>NOTE:</b> Template you can use for test cases, defects, and reports is located <a href="https://login.microsoftonline.com/0b2ca423-f0b1-481e-b731-f84ef5c4a2cc/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&response%5Ftype=code%20id%5Ftoken&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=22C4361028C5304AEC698F58BDAAB099F68C37EB22C0947D%2D498DB108DB9F40E78C3DBBB52A6748A498FAD115C979CB4365A060EE5613CF33&redirect%5Furi=https%3A%2F%2Fcomtradegroup%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0w&login%5Fhint=HANA%2EMARIC%40EDU%2EFIT%2EBA&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=65368aa0%2De018%2D5000%2De573%2D5b8f55ab97af">here</a></p>
+<p>You can also create your own templates, but it has to contain the important information.</p>
+<br>
+<p><b>Send your finished tasks to QA tutors until Friday EOD (week 1):</b></p>
+<p>
+    azra.rujanac@comtrade.com
+    lazar.radonjic@comtrade.com
+</p>
+<br>
+<p>
+    <b>Week 2:</b>
+<p>    1. Setup test automation environment</p>
+<p>    2. Create Selenium with maven project based on this <a href="https://www.youtube.com/watch?v=dbzc9UbFZt8">video tutorial</a></p>
+<p>    3. Add TestNG dependency to the selenium project </p>
+<p>    4. Create WebDriver first script like shown on <a href="https://www.selenium.dev/documentation/webdriver/getting_started/first_script/"> this page</a> - use Java and try to understand the code</p>
+<p>    5. Practice test automation on this page <a href="https://www.saucedemo.com/"></a></p>
+<br>
+<p><b>Create 2 scripts for following test cases:</b></p>
+<p> • Use different locators like id, xpath, class</p>
+<p> • Use TestNG annotations, assertions</p>
+<p> • Use Explicit Wait commands</p>
+<br>
+<div>
+<p>TEST CASE 1:</p>
+<p> • open url <a href="https://www.saucedemo.com/"></a></p>
+<p> • Login with valid user and password (standard_user/secret_sauce)</p>
+<p> • Verify following web elements are present on the products home page:</p>
+<p> • "PRODUCTS" header</p>
+<p> • shopping cart</p>
+<p> • burger menu in the upper left corner</p>
+<p> • Twitter, Facebook, Linkedin links</p>
+<p> • Logout</p>
+</div>
+<br>
+<div>
+<p>TEST CASE 2:</p>
+<p>    - open url <a href="https://www.saucedemo.com/"></a></p>
+<p>   - Login with valid user and password (standard_user/secret_sauce)</p>
+<p>- Click on the "Sauce Labs Backpack" item</p>
+<p>  - verify title, description and price of this item</p>
+- click on the button "ADD TO CART"
+    - Click on the button "BACK TO PRODUCTS"
+    - From product home page click "ADD TO CART" button for "Sauce Labs Fleece Jacket" item
+    - Click on the "Shopping Cart" button to open Shopping Cart page
+    - Click on the "Checkout" button to continue with order
+    - Enter Firstname, Lastname, Zipcode and click on Finish button
+    - Verify "THANK YOU FOR YOUR ORDER" is displayed
+    - Logout
+
+    <b>NOTE:</b> If you wish and if you have time feel free to add more steps and more scripts to cover some other scenarios (example negative).
+</div>
+<br>
+<p>
+    Upload your project code to the <b>GitHub.</b>
+    <b>Send your GitHub repository link to QA tutors until Friday EOD (week 2):</b>
+    azra.rujanac@comtrade.com​
+    lazar.radonjic@comtrade.com
+</p>
+<br>
+<h2><b>Feedback</b></h2>
+<p>complete Feedback at the end of the module <a href="https://forms.office.com/pages/responsepage.aspx?id=I6QsC7HwHki3MfhO9cSizDJTrBee39FEhOt2X1JJGrNUQUgwVDJSV0FKSlMxRllOMDFGMExDUzJWSy4u"></a></p>
+
+
+<h1 id="DevOps">DevOps</h1>
+<h2>Training objectives</h2>
+<br>
+<br>
+<p>
+    <b>Objectives</b> of this DevOps self-study materials and assignments are following:
+    • learn about DevOps (theoretical and practical way)
+    • get to know the tools for the DevOps
+    • GIT (code versioning tools)
+    • Jenkins + groovy
+    • Docker, docker swarm, docker build, docker compose
+    • Build tools (maven, docker build)
+    • get to know the technologies and processes behind DevOps
+    • CI/CD (for example Jenkins working with docker deployments)
+    • obtain some hands-on practical experiences with tools and tasks
+    • work in team and try to help each other with best of abilities and effort to achieve common goals
+</p>
+<br>
+<br>
+<h2>Basics</h2>
+<br>
+<p>Training duration: 2 weeks</p>
+<br>
+<p><b>MATERIALS</b></p>
+<p>
+    1. Jenkins
+       • VIDEO - <a href="https://www.youtube.com/playlist?list=PLy7NrYWoggjw_LIiDK1LXdNN82uYuuuiC">Jenkins for beginners </a>
+       • SHORT - <a href="https://www.tutorialspoint.com/jenkins/index.htm"> Jenkins Tutorial</a>
+       • DOCS - <a href="https://www.jenkins.io/doc/"></a>
+</p>
+<p>
+    2. Docker
+       • VIDEO - <a href="https://www.youtube.com/playlist?list=PLy7NrYWoggjzfAHlUusx2wuDwfCrmJYcs">Docker Tutorial for Beginners</a>
+       • SHORT - <a href="https://www.tutorialspoint.com/docker/index.htm"> Docker Tutorial</a>
+       • DOCS - <a href="https://docs.docker.com/"></a>
+</p>
+<p>
+    3. Additional materials
+       • VIDEO - <a href="https://www.youtube.com/watch?v=9_s3h_GVzZc"></a>
+       • VIDEO - <a href="https://www.youtube.com/playlist?list=PLy7NrYWoggjxKDRWLqkd4Kbt84XEerHhB">DevOps Tools</a>
+       • VIDEO - <a href="https://www.youtube.com/playlist?list=PLy7NrYWoggjzmPAyfDQgthSgx6VEVlS0-">Infrastructure as code (IaC)</a>
+       • VIDEO - <a href="https://www.youtube.com/playlist?list=PLy7NrYWoggjwV7qC4kmgbgtFBsqkrsefG"> DevOps Concepts explained</a>
+       • GROOVY - <a href="https://groovy-lang.org/"></a> (Scripting for task managament in Jenkins)
+</p>
+<br>
+<h1>Assignment (Virtual machine / Groovy)</h1>
+<p>• Set up local, unix, virtual machine (4-8GB RAM ,20 – 60 GB storage space). Personal recommendation is to use VMware and Ubuntu LTS.</p>
+<br>
+<p>
+    • Install Groovy. Learn Groovy syntax.
+      • Groovy - Lists - Iteration through Lists
+      • Maps - Iteration through Maps
+      • Groovy null safe operator, ternary operator
+      • Regular expressions (regex)
+      • OOP in Groovy
+      • Have a couple of examples for each point above.
+</p>
+<br>
+<h1>Assignment (Cloud VM / Jenkins)</h1>
+<p>
+    • Create a virtual machine on Azure and install Jenkins on it – make sure it’s   accessible via browser.
+    NOTE: You will have to generate a ssh key on your local VM and also open up specific ports in Azure UI in order to connect and use your VM with Jenkins properly.
+
+    Jenkins related tasks:
+
+    • Different types of Jenkins jobs (examples)
+    • Scripted vs Declarative pipeline (write a few examples) – pros & cons
+    • Jenkins agents and executors – learn what they are and how they are used
+    • Create a job that clones GitHub repository and executes a lot of shell commands afterwards (try using withCredentials)
+    • Create any three (3) jobs, where first job calls the other two in parallel
+     (bonus – try failFast option if you’re using declarative pipeline)
+     (bonus 2 – wait option when calling other jobs)
+    • Install a sample plugin – Maven one (if not already present) or BlueOcean (just a recommendation)
+    • Parameterized Jenkins jobs & usage of parameters (where are they stored?, a lot of examples)
+</p>
+<br>
+<h1>Assignment (Docker)</h1>
+<p>
+    • Install docker on your VM (Azure or local VM). To verify your installation worked, try running the following command: docker run hello-world
+    • Create a new account on <a href="https://hub.docker.com/">Docker Hub Container Image Library | App Containerization</a>
+    • Difference between a docker image and docker container. Investigate what docker registry is
+    • Build a simple docker image (Dockerfile / available commands) and push it to your repository
+</p>
+<br>
+<h1>Assignment (CI/CD)</h1>
+<p>
+    • For our CI/CD pipeline to work, we will need webhooks from GitHub to our Jenkins on Azure VM. First step is setting that connection up and testing it out (GitHub will automatically test the connection, but you can always trigger the webhook on your own)
+       - You will probably need to set up DNS (and open appropriate ports) for your VM
+       - We will be using pull request event as a webhook trigger and a personal recommendation again is to use <b>Generic-Webhook-Trigger</b> plugin for Jenkins.
+    - Webhook payload is going to be in <b>JSON</b> format
+    • When connection is set up and webhooks are working, goal is that whenever you merge a pull request, hook is going to trigger and call a “receiver” job.
+       - Purpose of receiver job is to parse the GitHub payload and call second job that will execute Maven commands on a given project (project will be provided to the interns), provided that pull request is closed (do not run the maven job if action is different)
+       - Recommendation again is to try using <b>groovy.json.JsonSlurperClassic()</b>
+       - Lastly, when maven job is done, it will call another job that will build a docker image and push it to your docker registry
+<p/>
+<br>
+<p><b>After you finish the module, please provide feedback</b></p>
+<p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=I6QsC7HwHki3MfhO9cSizDJTrBee39FEhOt2X1JJGrNUQjU4VFYyVUpaOFFTWjI2N09YSDE0TEg2Ni4u"></a></p>
+<br>
+<br>
+<h1>Advanced (extending after completing BASIC)</h1>
+<br>
+<p>Training duration: 2 months</p>
+<br>
+<p><b>MATERIALS</b></p>
+<p>
+    1. Ansible
+    • VIDEO - <a href="https://www.youtube.com/playlist?list=PL2_OBreMn7FqZkvMYt6ATmgC0KAGGJNAN">Ansible 101</a>
+    • SHORT - <a href="https://www.tutorialspoint.com/ansible/index.htm">Ansible Tutorial</a>
+    • DOCS - <a href="https://docs.ansible.com/"></a>
+    2. Terraform
+    • VIDEO - <a href="https://www.youtube.com/playlist?list=PL8HowI-L-3_9bkocmR3JahQ4Y-Pbqs2Nt">Terraform Tutorial</a>
+    • SHORT - <a href="https://upcloud.com/resources/tutorials/get-started-terraform">Get started with Terraform</a>
+    • DOCS - <a href="https://developer.hashicorp.com/terraform/docs"></a>
+    3. Kubernetes
+    • VIDEO - <a href="https://www.youtube.com/playlist?list=PLy7NrYWoggjziYQIDorlXjTvvwweTYoNC">Kubernetes Tutorial for Beginners</a>
+    • SHORT - <a href="https://www.tutorialspoint.com/kubernetes/index.htm">Kubernetes tutorial</a>
+    • DOCS - <a href="https://kubernetes.io/docs/home/"></a>
+    4. Linux
+    • VIDEO - <a href="https://www.youtube.com/c/LearnLinuxtv">Learn Linux</a>
+    • SHORT: <a href="https://linuxjourney.com/"></a>
+    5. Shell scripting (Bash, Perl, Python, Node.js)
+    • Most important is <b>bash</b> since is commonly used in containers, jenkins pipeline calls, help scripts, etc
+    6. Cloud Infrastructure (Azure & AWS)
+    • Basics of Azure (hands-on with assignment)
+    • Basics of AWS (hands-on with assignment)
+</p>
+<br>
+<p><b>TASKS</b></p>
+<p>
+    1. Assignment - Setup Jenkins
+     • Setup two linux VM's on Azure cloud using Terraform (use small VM size - 8G RAM, 2CPU cores)
+     • VM1 - using Ansible install Jenkins
+     • Secure and expose CA application to internet (using NGINX reverse proxy to enable HTTPS)
+     • VM2 - using Ansible install docker and make it Jenkins worker node
+    2. Assignment - Setup AKS with 2 nodes (use small VM size - 8G RAM, 2CPU cores)
+    3. Assignment - Build and publish LogicalDoc app to Kubernetes using Jenkins CI/CD
+     • Clone repo for LogicalDoc (<a href="https://github.com/logicaldoc/community"></a>)
+     • Build application - (using maven) with tests being executed
+     • Build docker image
+     • Publish docker image to docker registry
+     • Deploy LogicalDoc app to kubernetes
+     • Secure and expose application to internet (using Azure LoadBalancer - Application Gateway)
+     • Use ConfigMaps and Kubernetes Secrets for password storing and app configuration
+    4. Documenting
+     • Document tasks/procedures being executed in OneNote (for each Assignment)
+    5. Feedback
+     • complete Feedback at the end of the module <a href="https://forms.office.com/?redirecturl=https%3a%2f%2fforms.office.com%2fpages%2fdesignpagev2.aspx%3fsubpage%3ddesign%26id%3dI6QsC7HwHki3MfhO9cSizDJTrBee39FEhOt2X1JJGrNUOU9SVkVGSjZCNjBHTVNaUkFBSFRRMkdTVy4u">DevOps basic module Feedback (office.com)</a>
+</p>
+<br>
+<br>
+<h1 id="Java">Java</h1>
+<h2><b>Objectives</b></h2>
+<br>
+<h2>The objectives of this module are:</h2>
+<p>
+    • Establish proficiency to work on enterprise projects
+    • Understands basics of working with Java, Spring Boot
+    • Knows how to write proper SML tests and proper error handling
+</p>
+<br>
+<h2>Module feedback</h2>
+<p>In order to help us improve the Java module as much as possible, please leave your honest feedback at the end of module: <a href="https://forms.office.com/pages/responsepage.aspx?id=I6QsC7HwHki3MfhO9cSizDJTrBee39FEhOt2X1JJGrNUMVNVTEZDSjBBWjNYMlNETk1XRzlXSU1NTS4u">https://forms.office.com/r/HYHSfUFFTU</a></p>
+<br>
+<br>
+<h2><b>Basic topics</b></h2>
+<p>
+    Investigate exceptions in <b>Java</b>.
+
+    1. What they are?
+    2. What kinds of exceptions exist?
+    3. How are they handled?
+    4. Reserved words: try-catch, throw, and throws
+</p>
+<p>
+    After that, look into <b>Junit</b> tests:
+
+    1. Annotations
+    2. Assertions (fails)
+    3. Code coverage
+    4. Junit 4 vs 5
+    5. Mockito, PowerMock, EasyMock
+</p>
+<p>
+    And the last part is for <b>HTTP</b> requests:
+
+    1. HTTP request/response
+    2. HTTP servlet
+    3. In the end, check the S.O.L.I.D. principles.
+</p>
+<p>
+    <b>Maven</b> topics:
+    1. Purpose of maven
+    2. Usages
+    3. Commands (phases in the lifecycle of maven)
+    4. .m2
+       - What it is?
+       - Where it is?
+       - What it is for?
+    5. Pom
+       - Structure of file
+       - Structure of folders
+       - Child-parent project
+    6. Settings.xml
+       - How does it know where to get jars from?
+    7. Dependencies
+    8. Versions
+    9. dependencyManagement
+    10. properties
+    11. inheritance
+    12. maven plugins
+</p>
+<p>
+    <b>Spring boot</b> topics:
+    1. Spring boot starters
+    2. Pros vs cons
+    3. Annotations
+       - Basic ones, and what they are for
+       - @Autowired
+       - @Controller
+       - @Service
+       - @RequestMapping, types
+    4. Profiles
+    5. Swagger
+    6. Components
+       - Component scans
+    7. Spring vs Spring boot
+    8. JPA
+    9. Hibernate
+    10. XML configurations (properties, profiles, etc)
+    11. Exception handlers
+      - @ExceptionHandler
+      - @ControllerAdvice
+    12. Lombok
+</p>
+<br>
+<br>
+<h2><b>Basic assignments</b></h2>
+<h2>The goals of these assignments are:</h2>
+<p>
+    1. Investigate proper error handling in Java with examples
+    2. Write proper Unit tests for sample code (e.g. task that you did when applying)
+    3. Write a spring boot app that will work in threads (game, chat, or something similar) (with tests and error handling)
+    4. Enable the app to receive HTTP requests, and process them (tests, multithreading, error handling)
+</p>
+<br>
+<h2>Exceptions</h2>
+<p>
+     Try to write your examples of exceptions in all of these cases. Do not use already existing ones.
+    <b>• Checked vs unchecked exception</b>
+         Create an example of when the checked and unchecked exceptions are useful, and how you would use them.
+
+    <b>• Types of Exceptions</b>
+         Have multiple exceptions in one catch block, and demonstrate how you can catch all of them and process them (write log message) based on the type of exception. Do not use instanceof.
+</p>
+<h2>Testing</h2>
+<p>
+    <b>• Annotations</b>
+    Write a test for one of the classes that you have created for the entrance exam. Choose whichever you want. Add logs that will inform us when the test class has started and finished executing. Also, add logs that will inform us that test has started and finished.
+    Make sure that you’re using assertions to validate output.
+
+    <b>• Code coverage</b>
+    Make sure that code coverage is over 90%. Make sure that all test cases are covered. Is it possible to have code coverage of more than 90% without covering all test cases? How? Why?
+
+    <b>• Mocking objects</b>
+    Find a way to mock some objects, and use those mocked objects in tests. What are the pros and cons of this approach? Mockito vs PowerMock vs EasyMock?
+</p>
+<br>
+<h2>HTTP requests</h2>
+<p>
+    <b>• Types of requests</b>
+    Write an example of a piece of code receiving different kinds of HTTP requests.
+
+    <b>• Sending/receiving requests</b>
+    Extend the previous assignment to write another piece of code that will according to the input send different kinds of requests. In turn, code from assignment 3.1. will receive and process requests accordingly.
+</p>
+<br>
+<h2>Maven assignments</h2>
+<p>
+    1. Create a java - maven project (hello world).
+    2. Add some dependencies.
+    3. Add two child projects
+    4. Add some dependencies to them.
+    5. Specify version using dependency management
+    6. Specify some plugins
+    7. Build all the projects using one command in such a way that it is stored in .m2
+       - Which command should you use?
+       - Which command should you use if you only want to execute tests?
+       - Where is the jar file stored?
+    8. Upgrade the version of all projects (change it only in 1 place).
+    9. Re-build the projects (same as in step 7.)
+       - How are jars called now?
+</p>
+<br>
+<h2>Spring boot assignments:</h2>
+<p>
+    For spring boot based on the time left, we have different assignments:
+    1. Ballon assignment
+    2. Java assessment assignment
+    3. Stable marriages assignment
+</p>
+<br>
+<br>
+<h2>Advanced assignments</h2>
+<p>
+    For each group we will strive to create a separate assignment, that will include a lot of what they will need once actually on the project. For more info, check the corresponding channel.
+</p>
+<br>
+<h2>Advanced module</h2>
+<p>Please check the relevant channel</p>
+<br>
+<h2>Additional resources - design patterns</h2>
+<p>
+    Design patterns are a useful tool to notice and solve problems in a simple way. They are easy to understand and maintain. The following tutorials will help you understand what they can be used for.
+
+    An overall idea can be seen here <a href="https://www.tutorialspoint.com/design_pattern/design_pattern_overview.htm"></a> And the most useful links from that site are:
+    1. <a href="https://www.tutorialspoint.com/design_pattern/singleton_pattern.htm">Singleton</a>
+    2. <a href="https://www.tutorialspoint.com/design_pattern/factory_pattern.htm">Factory</a>
+    3. <a href="https://www.tutorialspoint.com/design_pattern/abstract_factory_pattern.htm">Abstract Factory</a>
+    4. <a href="https://www.tutorialspoint.com/design_pattern/builder_pattern.htm">Builder</a>
+    5. <a href="https://www.tutorialspoint.com/design_pattern/prototype_pattern.htm">Prototype</a>
+    6. <a href="https://www.tutorialspoint.com/design_pattern/adapter_pattern.htm">Adapter</a>
+    7. <a href="https://www.tutorialspoint.com/design_pattern/bridge_pattern.htm">Bridge</a>
+    8. <a href="https://www.tutorialspoint.com/design_pattern/composite_pattern.htm">Composite</a>
+    9. <a href="https://www.tutorialspoint.com/design_pattern/mvc_pattern.htm">MVC</a>
+    10. <a href="https://eur05.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.tutorialspoint.com%2Fdesign_pattern%2Fdecorator_pattern.htm&data=05%7C01%7CNatasa.Tovornik%40comtrade.com%7Cd40f682584194f24e9d808da3c8e5464%7C0b2ca423f0b1481eb731f84ef5c4a2cc%7C1%7C0%7C637888879245186996%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=IF4qGcYFKKtVUA%2FAlcupPjY0lbkZRNj9%2FvvKaEKFcUI%3D&reserved=0">Decorator</a>
+    11. <a href="https://www.tutorialspoint.com/design_pattern/proxy_pattern.htm">Proxy</a>
+    12. <a href="https://www.tutorialspoint.com/design_pattern/chain_of_responsibility_pattern.htm">Chain of Responsibility</a>
+    13. <a href="https://www.tutorialspoint.com/design_pattern/iterator_pattern.htm">Iterator</a>
+    14. <a href="https://eur05.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.tutorialspoint.com%2Fdesign_pattern%2Fobserver_pattern.htm&data=05%7C01%7CNatasa.Tovornik%40comtrade.com%7Cd40f682584194f24e9d808da3c8e5464%7C0b2ca423f0b1481eb731f84ef5c4a2cc%7C1%7C0%7C637888879245186996%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=2pWD0pZgmSKyk9WWn9g1Yb8yJ9v4TKs94OiQVTqrjaQ%3D&reserved=0">Observer</a>
+    15. <a href="https://www.tutorialspoint.com/design_pattern/state_pattern.htm">State</a>
+    16. <a href="https://www.tutorialspoint.com/design_pattern/template_pattern.htm">Template</a>
+    17. <a href="https://www.tutorialspoint.com/design_pattern/visitor_pattern.htm">Visitor</a>
+
+    Once you viewed and understood all, you can come up with your design patterns. Or if you will, find other examples on YouTube or other sites and post them here in the comments.
+</p>
+
+</body>
+</html>

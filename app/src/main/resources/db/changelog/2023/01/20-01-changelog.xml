@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.18.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1674204552976-1" author="vsuta (generated)">
+        <createTable tableName="answer">
+            <column autoIncrement="true" name="answer_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_answer"/>
+            </column>
+            <column name="grade" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comment" type="VARCHAR(255)"/>
+            <column name="question_id" type="BIGINT"/>
+            <column name="feedback_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1674204552976-2" author="vsuta (generated)">
+        <createTable tableName="assignment">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_assignment"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="module_module_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1674204552976-3" author="vsuta (generated)">
+        <createTable tableName="diary">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_diary"/>
+            </column>
+            <column name="date" type="DATETIME"/>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="text" type="CLOB"/>
+            <column name="tutee_tutee_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1674204552976-4" author="vsuta (generated)">
+        <createTable tableName="feedback">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_feedback"/>
+            </column>
+            <column name="next_step" type="VARCHAR(255)"/>
+            <column name="additional_comment" type="VARCHAR(255)"/>
+            <column name="module_module_id" type="BIGINT"/>
+            <column name="tutor_id" type="BIGINT"/>
+            <column name="tutee_tutee_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1674204552976-5" author="vsuta (generated)">
+        <createTable tableName="module">
+            <column autoIncrement="true" name="module_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_module"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1674204552976-6" author="vsuta (generated)">
+        <createTable tableName="question">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_question"/>
+            </column>
+            <column name="question" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1674204552976-7" author="vsuta (generated)">
+        <createTable tableName="task">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_task"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="assignment_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1674204552976-8" author="vsuta (generated)">
+        <createTable tableName="tutee">
+            <column autoIncrement="true" name="tutee_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tutee"/>
+            </column>
+            <column name="first_name" type="VARCHAR(255)"/>
+            <column name="last_name" type="VARCHAR(255)"/>
+            <column name="password" type="VARCHAR(255)"/>
+            <column name="active" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="diary_id" type="BIGINT"/>
+            <column name="user_role" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1674204552976-9" author="vsuta (generated)">
+        <createTable tableName="tutee_module">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tuteemodule"/>
+            </column>
+            <column name="tutee_tutee_id" type="BIGINT"/>
+            <column name="module_module_id" type="BIGINT"/>
+            <column name="start_date" type="DATE"/>
+            <column name="end_date" type="DATE"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1674204552976-10" author="vsuta (generated)">
+        <createTable tableName="tutor">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tutor"/>
+            </column>
+            <column name="first_name" type="VARCHAR(255)"/>
+            <column name="last_name" type="VARCHAR(255)"/>
+            <column name="password" type="VARCHAR(255)"/>
+            <column name="active" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="module_module_id" type="BIGINT"/>
+            <column name="user_role" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1674204552976-11" author="vsuta (generated)">
+        <createTable tableName="users">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users"/>
+            </column>
+            <column name="user_name" type="VARCHAR(255)"/>
+            <column name="password" type="VARCHAR(255)"/>
+            <column name="active" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="roles" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1674204552976-12" author="vsuta (generated)">
+        <addForeignKeyConstraint baseColumnNames="feedback_id" baseTableName="answer"
+                                 constraintName="FK_ANSWER_ON_FEEDBACK" referencedColumnNames="id"
+                                 referencedTableName="feedback"/>
+    </changeSet>
+    <changeSet id="1674204552976-13" author="vsuta (generated)">
+        <addForeignKeyConstraint baseColumnNames="question_id" baseTableName="answer"
+                                 constraintName="FK_ANSWER_ON_QUESTION" referencedColumnNames="id"
+                                 referencedTableName="question"/>
+    </changeSet>
+    <changeSet id="1674204552976-14" author="vsuta (generated)">
+        <addForeignKeyConstraint baseColumnNames="module_module_id" baseTableName="assignment"
+                                 constraintName="FK_ASSIGNMENT_ON_MODULE_MODULE" referencedColumnNames="module_id"
+                                 referencedTableName="module"/>
+    </changeSet>
+    <changeSet id="1674204552976-15" author="vsuta (generated)">
+        <addForeignKeyConstraint baseColumnNames="tutee_tutee_id" baseTableName="diary"
+                                 constraintName="FK_DIARY_ON_TUTEE_TUTEE" referencedColumnNames="tutee_id"
+                                 referencedTableName="tutee"/>
+    </changeSet>
+    <changeSet id="1674204552976-16" author="vsuta (generated)">
+        <addForeignKeyConstraint baseColumnNames="module_module_id" baseTableName="feedback"
+                                 constraintName="FK_FEEDBACK_ON_MODULE_MODULE" referencedColumnNames="module_id"
+                                 referencedTableName="module"/>
+    </changeSet>
+    <changeSet id="1674204552976-17" author="vsuta (generated)">
+        <addForeignKeyConstraint baseColumnNames="tutee_tutee_id" baseTableName="feedback"
+                                 constraintName="FK_FEEDBACK_ON_TUTEE_TUTEE" referencedColumnNames="tutee_id"
+                                 referencedTableName="tutee"/>
+    </changeSet>
+    <changeSet id="1674204552976-18" author="vsuta (generated)">
+        <addForeignKeyConstraint baseColumnNames="tutor_id" baseTableName="feedback"
+                                 constraintName="FK_FEEDBACK_ON_TUTOR" referencedColumnNames="id"
+                                 referencedTableName="tutor"/>
+    </changeSet>
+    <changeSet id="1674204552976-19" author="vsuta (generated)">
+        <addForeignKeyConstraint baseColumnNames="assignment_id" baseTableName="task"
+                                 constraintName="FK_TASK_ON_ASSIGNMENT" referencedColumnNames="id"
+                                 referencedTableName="assignment"/>
+    </changeSet>
+    <changeSet id="1674204552976-20" author="vsuta (generated)">
+        <addForeignKeyConstraint baseColumnNames="module_module_id" baseTableName="tutee_module"
+                                 constraintName="FK_TUTEEMODULE_ON_MODULE_MODULE" referencedColumnNames="module_id"
+                                 referencedTableName="module"/>
+    </changeSet>
+    <changeSet id="1674204552976-21" author="vsuta (generated)">
+        <addForeignKeyConstraint baseColumnNames="tutee_tutee_id" baseTableName="tutee_module"
+                                 constraintName="FK_TUTEEMODULE_ON_TUTEE_TUTEE" referencedColumnNames="tutee_id"
+                                 referencedTableName="tutee"/>
+    </changeSet>
+    <changeSet id="1674204552976-22" author="vsuta (generated)">
+        <addForeignKeyConstraint baseColumnNames="diary_id" baseTableName="tutee" constraintName="FK_TUTEE_ON_DIARY"
+                                 referencedColumnNames="id" referencedTableName="diary"/>
+    </changeSet>
+    <changeSet id="1674204552976-23" author="vsuta (generated)">
+        <addForeignKeyConstraint baseColumnNames="module_module_id" baseTableName="tutor"
+                                 constraintName="FK_TUTOR_ON_MODULE_MODULE" referencedColumnNames="module_id"
+                                 referencedTableName="module"/>
+    </changeSet>
+    <changeSet id="1674204552976-24" author="vsuta (generated)">
+
+        <sql>
+            INSERT INTO users(user_name, password, active, roles) VALUES ('admin','admin', 1,'ADMIN');
+        </sql>
+    </changeSet>
+
+    <changeSet id="1674204552976-25" author="vsuta (generated)">
+
+        <sql>
+            INSERT INTO module(name, description) VALUES ('General','General Module');
+        </sql>
+    </changeSet>
+
+    <changeSet id="1674204552976-26" author="vsuta (generated)">
+
+        <sql>
+            INSERT INTO module(name, description) VALUES ('Java','Java Module');
+        </sql>
+    </changeSet>
+
+    <changeSet id="1674204552976-27" author="vsuta (generated)">
+        <sql>
+            INSERT INTO module(name, description) VALUES ('QA/TA','Quality Assurance/Technology Assessment Module');
+        </sql>
+    </changeSet>
+
+    <changeSet id="1674204552976-28" author="vsuta (generated)">
+        <sql>
+            INSERT INTO module(name, description) VALUES ('DevOps','DevOps Module');
+        </sql>
+    </changeSet>
+    <changeSet id="1674204552976-29" author="vsuta (generated)">
+        <sql>
+            INSERT INTO tutor (first_name,last_name, password, active, email,module_module_id) VALUES ('Tutor', 'Tutor', 'password', 1, 'tutor@mail.com',1);
+        </sql>
+    </changeSet>
+
+    <changeSet id="1674204552976-30" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee showed sufficient level of knowledge for the tasks he encountered");
+        </sql>
+    </changeSet>
+
+    <changeSet id="1674204552976-31" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee showed understanding of the tasks");
+        </sql>
+    </changeSet>
+
+    <changeSet id="1674204552976-32" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee's solutions were not only functional but also high quality.");
+        </sql>
+    </changeSet>
+    <changeSet id="1674204552976-33" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee was able to learn relatively quickly and apply new knowledge.");
+        </sql>
+    </changeSet>
+    <changeSet id="1674204552976-34" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee has shown that he/she is good at defining and seeking the necessary information (not from tutor). ");
+        </sql>
+    </changeSet>
+    <changeSet id="1674204552976-35" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee has shown willingness to explore the problem more deeply than was necessary to solve a specific task.");
+        </sql>
+    </changeSet>
+    <changeSet id="1674204552976-36" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee showed effort and did not give up.")
+        </sql>
+    </changeSet>
+    <changeSet id="1674204552976-37" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee was successful in solving problem situations.");
+        </sql>
+    </changeSet>
+    <changeSet id="1674204552976-38" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee has successfully controlled his perseverance in situations when the original solutions are not enough.");
+        </sql>
+    </changeSet>
+    <changeSet id="1674204552976-39" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee successfully cooperated with team members.");
+        </sql>
+    </changeSet>
+    <changeSet id="1674204552976-40" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee actively communicated during duration of the module with tutor and other participants.");
+        </sql>
+    </changeSet>
+    <changeSet id="1674204552976-41" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee is pleasant and professional (in the sense of respecting others) in communication");
+        </sql>
+    </changeSet>
+    <changeSet id="1674204552976-42" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee proved that he/she can also work independently.");
+        </sql>
+    </changeSet>
+    <changeSet id="1674204552976-43" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee showed initiative.");
+        </sql>
+    </changeSet>
+    <changeSet id="1674204552976-44" author="fedja">
+        <sql>
+            INSERT INTO question (question) VALUES ("Trainee independently shared his views of the problem/tasks and suggested new solutions.");
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,98 @@
+/* Style the login form */
+#login-form {
+    width: 300px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    padding: 20px;
+}
+#formTuteeModule {
+    width: 300px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    padding: 20px;
+}
+body{
+    margin:0;height:100%;width:100%;
+}
+#header{
+    width:100%; height: 100px; margin:0; background-color:#e8f0fe; padding:20px;
+}
+#buttonLogout{
+    color:white; margin-top:15px;float:right;margin-right:0px;
+}
+#containerForContent{
+    width:2000px; height: 1000px; margin:10px;overflow: revert;
+    display:flex;
+}
+
+#formForAdding{
+    float:left; width:400px;
+}
+#formForAddingTuteeModule{
+    float:left; width:400px;
+    margin-left:30px;
+}
+#viewTables{
+    float:left; width:800px; padding-left:30px;
+}
+
+table.nowrap td, table.nowrap th {
+    white-space: nowrap;
+}
+
+
+.h2-bordered{
+    text-align: left;
+    padding:10px;
+    margin-left:10px;
+    float:left;
+    color:white;
+    letter-spacing: 4px;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+/* Style the input fields */
+#login-form input[type="text"], #login-form input[type="password"], #login-form select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+#formTuteeModule input[type="text"], #formTuteeModule input[type="date"], #formTuteeModule select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the submit button */
+#login-form button {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#formTuteeModule button {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Style the container for the login form */
+.container {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
